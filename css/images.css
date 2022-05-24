@@ -1,5 +1,5 @@
 img {
-    height: 70vh;
+    height: 100vh;
 }
 
 /*button {*/
@@ -7,8 +7,17 @@ img {
 /*}*/
 
 .buttons {
-    height: 10vh;
+    padding: 2vh;
 }
 /*div {*/
 /*    border: black 1px solid;*/
 /*}*/
+
+.cointainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.button-section {
+    padding: 16vh;
+}

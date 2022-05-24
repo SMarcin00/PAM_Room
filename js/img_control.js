@@ -3,30 +3,32 @@ let painting = 1;
 let color = 1;
 
 document.getElementById("Lights-1").addEventListener("click", function () {
-    if (this.classList.contains("active") && document.getElementById("Lights-2").classList.contains("active")) {
-        this.classList.remove("active");
-        lights = 2;
-        updatePic();
-    }
-    else if (!this.classList.contains("active") && document.getElementById("Lights-2").classList.contains("active")) {
-        this.classList.add("active");
-        lights = 3;
-        updatePic();
-    }
+    lights = 1;
+    this.classList.add("active");
+    document.getElementById("Lights-2").classList.remove("active");
+    document.getElementById("Lights-3").classList.remove("active");
+    updatePic();
 });
 
+
 document.getElementById("Lights-2").addEventListener("click", function () {
-    if (this.classList.contains("active") && document.getElementById("Lights-1").classList.contains("active")) {
-        this.classList.remove("active");
-        lights = 1;
-        updatePic();
-    }
-    else if (!this.classList.contains("active") && document.getElementById("Lights-1").classList.contains("active")) {
-        this.classList.add("active");
-        lights = 3;
-        updatePic();
-    }
+    lights = 2;
+    this.classList.add("active");
+    document.getElementById("Lights-1").classList.remove("active");
+    document.getElementById("Lights-3").classList.remove("active");
+    updatePic();
 });
+
+document.getElementById("Lights-3").addEventListener("click", function () {
+    lights = 3;
+    this.classList.add("active");
+    document.getElementById("Lights-1").classList.remove("active");
+    document.getElementById("Lights-2").classList.remove("active");
+    updatePic();
+});
+
+
+
 
 document.getElementById("Painting-1").addEventListener("click", function () {
     painting = 1;
